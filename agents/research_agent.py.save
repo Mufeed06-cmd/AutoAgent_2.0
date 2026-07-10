@@ -1,0 +1,28 @@
+from .base_agent import BaseAgent
+
+class ResearchAgent(BaseAgent):
+  def __int__(self):
+    super().__init__(
+    name="Research Agent",
+    description="Searches and analyzes information",
+    capabilities=["research","analysis"],
+      GNU nano 7.2                  research_agent.py
+from .base_agent import BaseAgent
+
+class ResearchAgent(BaseAgent):
+  def __int__(self):
+    super().__init__(
+name="Research Agent",
+description="Searches and analyzes information",
+capabilities=["research","analysis"],
+tools=[]
+)
+  def execute(self,task):
+    print(f"Researching: {task}")
+
+
+
+tools=[]
+)
+  def execute(self,task):
+    print(f"Researching: {task}")
