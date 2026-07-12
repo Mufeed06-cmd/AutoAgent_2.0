@@ -9,4 +9,4 @@ capabilities=["code","debug","refactor"],
 tools=[]
 )
   def execute(self,task):
-    print(f"Coding: {task}")
+    return f"Coding: {task}"

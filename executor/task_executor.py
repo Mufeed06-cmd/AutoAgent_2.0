@@ -6,6 +6,6 @@ class TaskExecutor:
     selected_agent=self.planner.select_agent(task)
     if selected_agent:
       print(f"Selected Agent: {selected_agent.name}")
-      selected_agent.execute(task)
+      return selected_agent.execute(task)
     else:
       print("Agent Not Found")

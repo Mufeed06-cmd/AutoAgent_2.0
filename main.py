@@ -6,6 +6,7 @@ from planner.planner import Planner
 from executor.task_executor import TaskExecutor
 from shared_state.shared_state import SharedState
 from tools.tool_manager import ToolManager
+from response_builder.response_builder import ResponseBuilder
 
 registry=AgentRegistry()
 research=ResearchAgent()
@@ -18,9 +19,12 @@ registry.register(testing)
 planner=Planner(registry)
 shared_state=SharedState()
 tool_manager=ToolManager()
+Response=ResponseBuilder()
 
 task="Test login module"
 
 executor=TaskExecutor(planner)
 
-executor.run(task)
+response=executor.run(task)
+result=Response.build(response)
+print(result)

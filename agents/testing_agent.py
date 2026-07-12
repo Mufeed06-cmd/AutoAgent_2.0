@@ -9,4 +9,4 @@ capabilities=["test","validate"],
 tools=[]
 )
   def execute(self,task):
-    print(f"Testing: {task}")
+    return f"Testing: {task}"

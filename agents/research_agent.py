@@ -9,4 +9,4 @@ capabilities=["research","analysis"],
 tools=[]
 )
   def execute(self,task):
-    print(f"Researching: {task}")
+    return f"Researching: {task}"
