@@ -21,7 +21,7 @@ shared_state=SharedState()
 tool_manager=ToolManager()
 Response=ResponseBuilder()
 
-task="Test login module"
+task="Hello"
 
 executor=TaskExecutor(planner)
 

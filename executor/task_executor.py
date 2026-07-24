@@ -3,9 +3,12 @@ class TaskExecutor:
     self.planner=planner
   
   def run(self,task):
+    response=[]
     selected_agent=self.planner.select_agent(task)
     if selected_agent:
-      print(f"Selected Agent: {selected_agent.name}")
-      return selected_agent.execute(task)
+      for agent in selected_agent:
+        print(f"Selected Agent: {agent.name}")
+        response.append(agent.execute(task))
+      return  response
     else:
       print("Agent Not Found")
