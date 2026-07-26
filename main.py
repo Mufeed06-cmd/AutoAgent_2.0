@@ -21,9 +21,9 @@ shared_state=SharedState()
 tool_manager=ToolManager()
 Response=ResponseBuilder()
 
-task="Hello"
+task="Research Multi Agent System and Write small code on it."
 
-executor=TaskExecutor(planner)
+executor=TaskExecutor(planner,shared_state)
 
 response=executor.run(task)
 result=Response.build(response)
