@@ -21,7 +21,7 @@ shared_state=SharedState()
 tool_manager=ToolManager()
 Response=ResponseBuilder()
 
-task="Research Multi Agent System and Write small code on it."
+task="search"
 
 executor=TaskExecutor(planner,shared_state)
 

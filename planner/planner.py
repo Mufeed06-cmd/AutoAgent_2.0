@@ -1,3 +1,4 @@
+import re
 class Planner:
 
     def __init__(self, registry):
@@ -31,7 +32,7 @@ class Planner:
 
             for agent in self.registry.get_agents():
                 for capability in agent.capabilities:
-                    if capability in subtask and agent not in agents_for_subtask:
+                    if re.search(rf"\b{re.escape(capability)}\b",subtask) and agent not in agents_for_subtask:
                         agents_for_subtask.append(agent)
 
             # Keep the subtask even if no agent is found
