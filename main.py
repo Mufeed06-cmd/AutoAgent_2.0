@@ -21,7 +21,7 @@ shared_state=SharedState()
 tool_manager=ToolManager()
 Response=ResponseBuilder()
 
-task="search"
+task="Generate a 3D game level"
 
 executor=TaskExecutor(planner,shared_state)
 

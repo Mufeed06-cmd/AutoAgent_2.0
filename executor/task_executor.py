@@ -9,6 +9,11 @@ class TaskExecutor:
 
         if selected_agent:
             for subtask, agents in selected_agent.items():
+                if len(agents)==0:
+                  message=f"No suitable agent found for subtask: {subtask}"
+                  print(message)
+                  response.append(message)
+                  continue
                 for agent in agents:
                     try:
                       result = agent.execute(subtask)
