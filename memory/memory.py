@@ -5,3 +5,6 @@ class Memory:
     self.memory[key]=value
   def get(self,key):
     return self.memory.get(key)
+  def delete(self,key):
+    self.memory.pop(key,None)
+

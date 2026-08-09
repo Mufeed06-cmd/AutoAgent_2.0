@@ -1,7 +1,8 @@
 class TaskExecutor:
-    def __init__(self, planner,shared_state):
+    def __init__(self, planner,shared_state,memory):
         self.planner = planner
         self.shared_state=shared_state
+        self.memory=memory
         
     def run(self, task):
         response = []

@@ -7,11 +7,12 @@ from executor.task_executor import TaskExecutor
 from shared_state.shared_state import SharedState
 from tools.tool_manager import ToolManager
 from response_builder.response_builder import ResponseBuilder
-
+from memory.memory import Memory
+memory = Memory()
 registry=AgentRegistry()
-research=ResearchAgent()
-coding=CodingAgent()
-testing=TestingAgent()
+research=ResearchAgent(memory)
+coding=CodingAgent(memory)
+testing=TestingAgent(memory)
 
 registry.register(research)
 registry.register(coding)
@@ -23,7 +24,7 @@ Response=ResponseBuilder()
 
 task="Generate a 3D game level"
 
-executor=TaskExecutor(planner,shared_state)
+executor=TaskExecutor(planner,shared_state,memory)
 
 response=executor.run(task)
 result=Response.build(response)

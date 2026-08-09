@@ -1,12 +1,13 @@
 from .base_agent import BaseAgent
 
 class TestingAgent(BaseAgent):
-  def __init__(self):
+  def __init__(self,memory):
     super().__init__(
 name="Testing Agent",
 description="Tests Software",
 capabilities=["test","validate"],
-tools=[]
+tools=[],
+memory=memory
 )
   def execute(self,task):
     return f"Testing: {task}"
