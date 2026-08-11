@@ -10,4 +10,6 @@ tools=[],
 memory=memory
 )
   def execute(self,task):
+    self.memory.set("last_test",task)
+    print(self.memory.get("last_test"))
     return f"Testing: {task}"

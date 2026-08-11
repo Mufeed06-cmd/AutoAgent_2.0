@@ -22,7 +22,7 @@ shared_state=SharedState()
 tool_manager=ToolManager()
 Response=ResponseBuilder()
 
-task="Generate a 3D game level"
+task="Research a python code"
 
 executor=TaskExecutor(planner,shared_state,memory)
 
